@@ -7,6 +7,6 @@ export default async function page() {
         redirect("/api/auth/signin");
     }
   return (
-    <div>page</div>
+    <div>hello this is your account</div>
   )
 }

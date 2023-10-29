@@ -3,6 +3,6 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>Hello this is a demo content</div>
   )
 }
