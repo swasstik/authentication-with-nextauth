@@ -2,8 +2,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { getServerSession } from 'next-auth/next'
-import SessionProvider from '@/components/sessionprovider'
+import SessionProvider from '@/components/Sessionprovider'
 import NavMenu from '@/components/Navmenu'
+import ToasterContext from '../components/ToasterContext';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +23,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <SessionProvider session={session}>
-          <main className='mx-auto max-w-5xl text-2xl flex gap-2'><NavMenu/>{children}</main></SessionProvider></body>
+          <main className='mx-auto max-w-5xl text-2xl flex gap-2'><ToasterContext/><NavMenu/>{children}</main></SessionProvider></body>
     </html>
   )
 }
