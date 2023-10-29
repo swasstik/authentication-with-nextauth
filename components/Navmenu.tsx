@@ -9,7 +9,7 @@ function AuthButton(){
         return(
           <>
          hello {session.user?.name}<br />
-         {/* <pre>{JSON.stringify(session)}</pre> */}
+        
           <button onClick={()=>signOut()}>Sign Out</button>
           </>
         );
